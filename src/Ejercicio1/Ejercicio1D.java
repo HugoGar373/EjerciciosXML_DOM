@@ -18,7 +18,7 @@ public class Ejercicio1D {
         String continenteBuscado = scanner.nextLine().trim();
 
         try {
-            File inputFile = new File("Zoo.xml");
+            File inputFile = new File("src/Ejercicio1/Zoo.xml");
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document doc = dBuilder.parse(inputFile);
