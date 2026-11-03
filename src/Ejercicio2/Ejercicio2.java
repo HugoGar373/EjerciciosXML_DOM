@@ -3,6 +3,7 @@ package Ejercicio2;
 import java.io.File;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
@@ -47,6 +48,8 @@ public class Ejercicio2 {
             }
 
             Transformer transformer = TransformerFactory.newInstance().newTransformer();
+            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+
             transformer.transform(
                     new DOMSource(docBolsa),
                     new StreamResult(new File(ruta + fichero_salida))
